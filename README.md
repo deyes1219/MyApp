@@ -61,7 +61,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hola mundo");
+  res.send("Bienvenidos");
 });
 
 app.get("/users", (req, res) => {
