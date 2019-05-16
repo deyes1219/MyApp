@@ -9,8 +9,7 @@ app.get("/profesor", (req, res) => {
   let profesor = [
     { name: "Francisco", lastName: "gutierrez", phone: 3007597765 },
     { name: "Delfinia", lastName: "Torres", phone: 3215643679 },
-    { name: "Marcos", lastName: "Restrepo", phone: 31567840980 },
-    { name: "luisiana", lastName: "Sanchez", phone: 3207908654}
+    { name: "Marcos", lastName: "Restrepo", phone: 31567840980 }
 
   ];
   res.send(profesor);
@@ -20,14 +19,46 @@ app.get("/materia", (req, res) => {
     { nombre: "Programación web", IH: 2 },
     { nombre: "matemática", IH: 6 },
     { nombre: "Español", IH: 2 }
-
-app.get("/acudiente", (req, res) => {
-  let acudiente = [
-    { nombre: "juan", apellido: perez,telefono:1234 },
-
   ];
   res.send(materia);
+
 });
+app.get("/acudiente", (req, res) => {
+  let acudiente = [
+    { nombre: "juan", apellido: "perez", telefono:7856437 },
+    { nombre: "Rodriga", apellido: "Mestra", telefono:7976543 },
+    { nombre: "Martin", apellido: "Otero", telefono:7835990 },
+  ];
+  res.send(acudiente);
+  });
+
+app.get("/estudiante", (req, res) => {
+  let estudiante = [
+    { nombre: "David", apellido: "Perez", tipoid:"TI",curso: "4B" },
+    { nombre: "Mariela", apellido: "Cordero", tipoid:"TI",curso: "5B" },
+    { nombre: "Denis", apellido: "Miranda", tipoid:"TI",curso: "4B" }
+
+  ];
+  res.send(estudiante);
+  });
+
+  app.get("/listado", (req, res) => {
+  let listado = [
+    { fecha: "23-05-2018" },
+    { fecha: "23-05-2018" },
+    { fecha: "23-05-2018" }
+  ];
+  res.send(listado);
+  });
+  app.get("/asistencia", (req, res) => {
+  let asistencia = [
+    { asistencias:10, Inasistencias: 0, fechaAsistencia:"23-05-2018" },
+     { asistencias:8, Inasistencias: 2, fechaAsistencia:"24-05-2018" },
+      { asistencias:10, Inasistencias: 0, fechaAsistencia:"25-05-2018" }
+  ];
+  res.send(asistencia);
+  });
+
 app.listen(3000, () => {
   console.log("Server on port http://localhost:3000");
 });
